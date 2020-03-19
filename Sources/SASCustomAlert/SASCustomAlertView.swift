@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIAlertController {
     
-    static public func showAlert(title: String, message: String, buttonTitle: String, selfClass: UIViewController) {
+    static func showAlert(title: String, message: String, buttonTitle: String, selfClass: UIViewController) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: buttonTitle, style: .default, handler: nil)
@@ -20,7 +20,7 @@ public extension UIAlertController {
         
     }
     
-    static public func showAlertWithComBLK(title: String, message: String, buttonTitle: String, selfClass: UIViewController, comBLK: @escaping() -> ()) {
+    static func showAlertWithComBLK(title: String, message: String, buttonTitle: String, selfClass: UIViewController, comBLK: @escaping() -> ()) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: buttonTitle, style: .default) { (_) in
@@ -34,7 +34,7 @@ public extension UIAlertController {
         
     }
     
-    static public  func showAlertWithYesOrNo(title: String, message: String, selfClass: UIViewController, comBLK: @escaping(_ state:Bool) -> ()) {
+    static func showAlertWithYesOrNo(title: String, message: String, selfClass: UIViewController, comBLK: @escaping(_ state:Bool) -> ()) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
@@ -52,7 +52,7 @@ public extension UIAlertController {
         
     }
     
-    static public func alertForAppVersion(title: String, message: String, selfClass: UIViewController,yesBtnTitle: String, noBtnTitle: String ,comBLK: @escaping(_ state:Bool) -> ()) {
+    static func alertForAppVersion(title: String, message: String, selfClass: UIViewController,yesBtnTitle: String, noBtnTitle: String ,comBLK: @escaping(_ state:Bool) -> ()) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
