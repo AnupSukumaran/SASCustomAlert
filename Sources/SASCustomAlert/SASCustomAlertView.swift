@@ -34,16 +34,16 @@ public extension UIAlertController {
         
     }
     
-    static func showAlertWithYesOrNo(title: String, message: String, selfClass: UIViewController, comBLK: @escaping(_ state:Bool) -> ()) {
+    static func showAlertWithYesOrNo(title: String, message: String, selfClass: UIViewController, comBLK: @escaping(_ state:Bool,_ alert: UIAlertController) -> ()) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         let yesAction = UIAlertAction(title: "Yes", style: .default) { (_) in
-            comBLK(true)
+            comBLK(true,alert)
         }
         
         let noAction = UIAlertAction(title: "No", style: .default) { (_) in
-            comBLK(false)
+            comBLK(false,alert)
         }
 
         alert.addAction(yesAction)
